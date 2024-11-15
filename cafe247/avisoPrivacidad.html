@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+    
+    <!-- Validation js -->
+	<script src="../js/validate.js"></script>
+	
+	<script>
+      var isRTL = JSON.parse(localStorage.getItem('isRTL'));
+      if (isRTL) {
+        var linkDefault = document.getElementById('style-default');
+        var userLinkDefault = document.getElementById('user-style-default');
+        linkDefault.setAttribute('disabled', true);
+        userLinkDefault.setAttribute('disabled', true);
+        document.querySelector('html').setAttribute('dir', 'rtl');
+      } else {
+        var linkRTL = document.getElementById('style-rtl');
+        var userLinkRTL = document.getElementById('user-style-rtl');
+        linkRTL.setAttribute('disabled', true);
+        userLinkRTL.setAttribute('disabled', true);
+      }
+    </script>
+</head>
+
+
+	<div class="modal-dialog modal-fullscreen">
+                  <div class="modal-content">
+                        <div class="modal-header">
+                              <h5 class="modal-title fs-2  w-100 text-center" id="staticBackdropLabel">
+                                    Siarex Technologies</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                        </div>
+
+
+                        <div class="modal-body">
+                              <div class="container">
+                                    <div
+                                          class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+                                          <div class="col-lg-12 p-3 p-lg-5 pt-lg-3">
+                                                <h6 class="fs-2 text-center">Aviso de
+                                                      Privacidad</h6>
+
+                                                <p class="text-dark fs-1" style="text-align: justify;">
+                                                      Siarex Technologies, S. de R. L. de C.V.; sociedad
+                                                      constituida conforme a las Leyes de los Estados Unidos
+                                                      Mexicanos, que se encuentra bajo control, y que opera
+                                                      bajo procesos y políticas internas de Protección de
+                                                      Datos Personales, en lo sucesivo denominada como
+                                                      “SIAREX”, ubicada en Blvd. Gral. Rodolfo Sanchez
+                                                      Taboada # 929, Col. Zona Urbana Rio, Tijuana, Baja
+                                                      California, C.P. 22010, nuestro Departamento de
+                                                      Protección de Datos es el responsable de los Datos que
+                                                      solicitamos y se ubican en el mismo domicilio, podrás
+                                                      contactarlo en el correo electrónico
+                                                      datospersonales@siarex.com.mx </p>
+
+                                                <p class="text-dark fs-1" style="text-align: justify;">
+                                                      En este acto, le solicitamos su consentimiento expreso
+                                                      para que SIAREX, pueda acceder y tratar los siguientes
+                                                      datos personales, y datos personales sensibles:</p>
+
+                                                <p class="text-dark fs-1" style="text-align: justify;">
+                                                      Nombre completo, Fecha de Nacimiento, Edad,
+                                                      Nacionalidad, Género, Domicilio, Teléfono (Casa,
+                                                      Celular, Oficina, Recados), Estado Civil, Ingreso
+                                                      mensual, Huellas Dactilares, Datos Biométricos, Estado
+                                                      de Salud, condición de discapacidad y apoyos técnicos
+                                                      (si es el caso), Redes Sociales, Historial Académico,
+                                                      Historial Laboral, Historial Crediticio, Antecedentes
+                                                      Legales y/o de Tránsito, Posición laboral, Correo
+                                                      electrónico, Grupo sanguíneo, Peso, Estatura, Número y
+                                                      Tipo de Licencia, Créditos ante el Infonavit y/o
+                                                      Fonacot, Número de Seguridad Social, Clave Única de
+                                                      Registro de Población, Registro Federal de
+                                                      Contribuyentes, Constancia de Situación Fiscal, (así
+                                                      como solicitarla de manera directa al SAT),
+                                                      Fotografías, Número de cuenta bancario para depósito
+                                                      de nómina, datos de familiares directos declarados en
+                                                      Ficha Keyworks, Credencial de Elector, Pasaporte,
+                                                      Cartilla de liberación del Servicio Militar Nacional,
+                                                      Cédula Profesional, Constancia de Estudios, Carta de
+                                                      naturalización, test de alcoholemia y antidoping, Visa
+                                                      de Trabajo en caso de ser Extranjeros, Pretensiones
+                                                      económicas ó Sueldo Anterior, geolocalización y
+                                                      monitoreo de videograbación de seguridad.</p>
+
+                                                <p class="text-dark fs-1" style="text-align: justify;">
+                                                      La información que proporcione deberá ser veraz y
+                                                      completa. Por lo que queda bajo su responsabilidad la
+                                                      veracidad de los datos proporcionados y en ningún caso
+                                                      SIAREX será responsable a este respecto.
+                                                </p>
+
+                                                <p class="text-dark fs-1" style="text-align: justify;">
+                                                      La información proporcionada ya sea de manera directa
+                                                      en nuestras sucursales, portales WEB (
+                                                      https://www.siarex.com.mx/ / https://www.siarex.com/ )
+                                                      aplicación móvil ó bien por correo electrónico, estará
+                                                      sujeto a lo establecido en el presente Aviso de
+                                                      Privacidad.
+                                                </p>
+
+                                                <p class="text-dark fs-1" style="text-align: justify;">
+                                                      Las finalidades para las que recabamos sus datos son:
+                                                      de reclutamiento, selección, aplicación de estudios
+                                                      médicos, evaluación psicométrica, socioeconómica,
+                                                      preferencias, y/o competencias laborales, negative
+                                                      file, pruebas de manejo, investigación en buró de
+                                                      crédito, historial de Infonavit, Carta de No
+                                                      Antecedentes Penales, Test de Integridad (Polígrafo,
+                                                      Midot), anticipos de nómina, gestión de seguros de
+                                                      gastos médicos y/o seguros de vida, aplicación de
+                                                      encuestas, envío de información de servicios
+                                                      proporcionados por SIAREX, mercadotécnicos,
+                                                      publicitarios o de prospección comercial.
+                                                </p>
+
+                                                <p class="text-dark fs-1" style="text-align: justify;">
+                                                      En este sentido, y para cumplir con dichas
+                                                      finalidades, se requiere su consentimiento expreso
+                                                      para el caso de que sus datos personales y datos
+                                                      personales sensibles sean transferidos a los terceros
+                                                      señalados anteriormente, incluyendo a los Clientes y
+                                                      Proveedores de SIAREX.
+                                                </p>
+
+                                                <p class="text-dark fs-1" style="text-align: justify;">
+                                                      Si doy mi consentimiento para la transferencia de mis
+                                                      datos.
+                                                </p>
+
+                                                <p class="text-dark fs-1" style="text-align: justify;">
+                                                      De igual forma en el momento que lo estime oportuno
+                                                      podrá ejercer sus derechos ARCO (acceso,
+                                                      rectificación, cancelación y oposición) sobre el
+                                                      tratamiento de los datos personales proporcionados,
+                                                      así como revocar el consentimiento otorgado en este
+                                                      documento, por lo cual deberá ponerse en contacto con
+                                                      nosotros a través del correo electrónico
+                                                      “datospersonales@siarex.com.mx”; el procedimiento y
+                                                      requisitos que deberá contener su solicitud de
+                                                      conformidad con lo dispuesto en la Ley y su
+                                                      Reglamento, son los siguientes:
+                                                </p>
+
+                                                <p class="text-dark fs-1" style="text-align: justify;">
+                                                      1. Nombre y Domicilio, si no se incluye la dirección
+                                                      se dará por no recibida la solicitud.
+                                                      2. El documento que acredite su identidad o la
+                                                      personalidad de su representante. (Copia de
+                                                      identificación oficial vigente.) El representante
+                                                      deberá acreditar la identidad del titular, identidad
+                                                      del representante, y sus facultades de representación
+                                                      mediante instrumento público o carta poder firmada
+                                                      ante dos testigos, o declaración en comparecencia
+                                                      personal del titular;
+                                                      3. La descripción clara y precisa de los datos
+                                                      personales a los que desea acceder, rectificar,
+                                                      cancelar u oponerse;
+                                                      4. Descripción de otros elementos que faciliten la
+                                                      localización de sus datos personales. (portal Web,
+                                                      Sucursal.)
+                                                </p>
+
+                                                <p class="text-dark fs-1" style="text-align: justify;">
+                                                      Los documentos deberán ser escaneados y adjuntados al
+                                                      correo electrónico para verificar la veracidad de los
+                                                      mismos.
+                                                </p>
+
+                                                <p class="text-dark fs-1" style="text-align: justify;">
+                                                      Una vez recibida su solicitud para ejercer sus
+                                                      derechos ARCO debidamente integrada y con los
+                                                      requisitos legales vigentes, recibirá contestación de
+                                                      nuestra parte en un plazo no mayor a 20 días hábiles.
+                                                      Si resultara procedente, se hará efectiva dentro de
+                                                      los 15 días hábiles siguientes a que le comunicamos
+                                                      nuestra respuesta.
+                                                </p>
+
+                                                <p class="text-dark fs-1" style="text-align: justify;">
+                                                      En caso de estar inconforme con la respuesta
+                                                      notificada, tendrá un plazo de 20 días hábiles para
+                                                      ponerse en contacto con nosotros, indicando su
+                                                      inconformidad o inquietud, con la finalidad de
+                                                      resolver dicha situación.
+                                                </p>
+
+                                                <p class="text-dark fs-1" style="text-align: justify;">
+                                                      En caso de no responder nuestra contestación en el
+                                                      plazo señalado, SIAREX entiende de buena fe que está
+                                                      conforme con nuestra respuesta.
+                                                </p>
+
+                                                <p class="text-dark fs-1" style="text-align: justify;">
+                                                      En nuestro programa de notificación de promociones,
+                                                      ofertas y servicios a través de correo electrónico,
+                                                      sólo SIAREX tiene acceso a la información recabada.
+                                                      Este tipo de publicidad se realiza mediante avisos y
+                                                      mensajes promocionales de correo electrónico, los
+                                                      cuales sólo serán enviados a usted y a aquellos
+                                                      contactos registrados para tal propósito, esta
+                                                      indicación podrá modificarla en cualquier momento. En
+                                                      los correos electrónicos enviados, pueden incluirse
+                                                      ocasionalmente ofertas de terceras partes que sean
+                                                      nuestros socios comerciales.
+                                                </p>
+
+                                                <p class="text-dark fs-1" style="text-align: justify;">
+                                                      En el caso de empleo de cookies, el botón de “ayuda”
+                                                      que se encuentra en la barra de herramientas de la
+                                                      mayoría de los navegadores, le dirá cómo evitar
+                                                      aceptar nuevas cookies, cómo hacer que el navegador le
+                                                      notifique cuando recibe una nueva cookie o cómo
+                                                      deshabilitar todas las cookies.
+                                                </p>
+
+                                                <p class="text-dark fs-1" style="text-align: justify;">
+                                                      Las cookies son pequeñas piezas de información que son
+                                                      enviadas por el sitio Web a su navegador y se
+                                                      almacenan en el disco duro de su equipo y se utilizan
+                                                      para determinar sus preferencias cuando se conecta a
+                                                      los servicios de nuestros sitios, así como para
+                                                      rastrear determinados comportamientos o actividades
+                                                      llevadas a cabo por usted dentro de nuestro sitio.
+                                                </p>
+
+                                                <p class="text-dark fs-1" style="text-align: justify;">
+                                                      En algunas secciones de nuestro sitio requerimos que
+                                                      el cliente tenga habilitados las cookies ya que
+                                                      algunas de las funcionalidades requieren de éstas para
+                                                      trabajar. Las cookies nos permiten: a) reconocerlo al
+                                                      momento de entrar a nuestro sitio y ofrecerle de una
+                                                      experiencia personalizada, b) conocer la configuración
+                                                      personal del sitio especificada por usted, por
+                                                      ejemplo, Las cookies nos permiten detectar el ancho de
+                                                      banda que usted ha seleccionado al momento de ingresar
+                                                      al home page de nuestro sitio, de tal forma que
+                                                      sabemos qué tipo de información es aconsejable
+                                                      descargar, c) calcular el tamaño de nuestra audiencia
+                                                      y medir algunos parámetros de tráfico, pues cada
+                                                      navegador que obtiene acceso a nuestros sitios
+                                                      adquiere un cookie que se usa para determinar la
+                                                      frecuencia de uso y las secciones de los sitios
+                                                      visitadas, reflejando así sus hábitos y preferencias,
+                                                      información que nos es útil para mejorar el contenido,
+                                                      los titulares y las promociones para los usuarios.
+                                                </p>
+
+                                                <p class="text-dark fs-1" style="text-align: justify;">
+                                                      SIAREX ha adoptado los niveles de seguridad de
+                                                      protección de datos personales legalmente requeridos
+                                                      por la Ley y su Reglamento, bajo los principios de
+                                                      licitud, calidad, consentimiento, información,
+                                                      finalidad, lealtad, proporcionalidad y
+                                                      responsabilidad. Todo esto bajo estrictas reglas de
+                                                      seguridad, confidencialidad y consistencia de
+                                                      información.
+                                                </p>
+
+                                                <p class="text-dark fs-1" style="text-align: justify;">
+                                                      Hacemos de su conocimiento que sus datos personales y
+                                                      datos personales sensibles serán resguardados bajo
+                                                      estrictas medidas de seguridad administrativas,
+                                                      técnicas y físicas las cuales han sido implementadas
+                                                      con el objeto de proteger sus datos personales contra
+                                                      daño, perdida, alteración, destrucción o el uso o
+                                                      acceso o tratamiento no autorizado.
+                                                </p>
+
+                                                <p class="text-dark fs-1" style="text-align: justify;">
+                                                      La Web Site de SIAREX conecta con ciertos links de
+                                                      otras páginas Web que pertenecen a terceros sobre los
+                                                      que SIAREX no tiene control alguno. En estos supuestos
+                                                      SIAREX no asume responsabilidad alguna ni compromiso
+                                                      sobre las políticas de privacidad de la información
+                                                      contenidas en esas páginas.
+                                                </p>
+
+                                                <p class="text-dark fs-1" style="text-align: justify;">
+                                                      Esta declaración de Privacidad está sujeta a la
+                                                      política de privacidad de SIAREX lo cual constituye un
+                                                      acuerdo legal entre usted y SIAREX.
+                                                </p>
+
+                                                <p class="text-dark fs-1" style="text-align: justify;">
+                                                      SIAREX se reserva el derecho de efectuar en cualquier
+                                                      momento modificaciones o actualizaciones al presente
+                                                      aviso de privacidad, para la atención de novedades
+                                                      legislativas o jurisprudenciales, políticas internas,
+                                                      nuevos requerimientos para la prestación u
+                                                      ofrecimiento de nuestros servicios y prácticas del
+                                                      mercado, cualquier modificación al Aviso de Privacidad
+                                                      estará disponible a través de nuestros portales:
+                                                      https://www.siarex.com.mx/ /
+                                                      https://www.siarex.com.mx/ ; sección “aviso de
+                                                      privacidad”
+                                                </p>
+
+                                                <p class="text-dark fs-1" style="text-align: justify;">
+                                                      Al navegar en cualquiera de los sitios web de SIAREX,
+                                                      significa que ha leído, entendido y está de acuerdo
+                                                      con los términos antes expuestos.
+                                                </p>
+
+                                                <p class="text-dark fs-1" style="text-align: justify;">
+                                                      El presente Aviso de Privacidad ha sido modificado el
+                                                      día 01 de Junio de 2022.
+                                                </p>
+
+
+                                          </div>
+
+                                    </div>
+                              </div>
+                        </div>
+
+                  </div>
+            </div>
+            
+
+</html>

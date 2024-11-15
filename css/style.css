@@ -1,0 +1,415 @@
+
+.font19 {
+	font-size: 19px !important;
+	font-weight: 500 !important;
+}
+
+.icoSubMenu1 {
+	font-size: 10px !important;
+}
+
+.btnPanel{
+	margin-right: 10px !important;
+}
+
+.navbar-vertical .toggle-icon-wrapper {
+    margin-right: 0rem!important;
+}
+
+.form-control {
+    padding: 0.3125rem 0.5rem !important;
+    font-size: 0.9em !important;
+}
+
+.col-form-label{
+	font-size: 0.9em !important;
+}
+
+.select2-container--bootstrap-5 .select2-dropdown .select2-results__options .select2-results__option {
+    font-size: 0.9em !important;
+}
+
+.select2-container--bootstrap-5 .select2-selection {
+    padding: 5px 8px !importat;
+    font-size: 0.9em !important;
+}
+
+.select2-container--bootstrap-5 .select2-dropdown .select2-search .select2-search__field {
+    font-size: 13px !important;
+}
+
+.has-error{
+	border: 1px solid #e63757;
+	border-color: #e63757;
+    padding-right: 0px;
+    border-radius: var(--falcon-modal-border-radius);
+}
+
+.has-success {
+	border: 1px solid #00d27a;
+    border-color: #00d27a;
+    border-radius: var(--falcon-modal-border-radius);
+}
+
+.help-block {
+	display: none !important;
+}
+
+div.dt-buttons {
+    float: right !important;
+    padding-bottom: 10px !important;
+}
+
+
+div.dt-button-collection {
+    position: absolute !important;
+    inset: 0px 0px auto auto !important;
+    margin: 0px !important;
+    transform: translate(0px, 38px) !important;
+    border-radius: 0.375rem !important;
+    width: auto !important; 
+    padding: 4px 0px 0px 0px !important;
+}
+
+div.dt-button-collection button.dt-button, div.dt-button-collection div.dt-button, div.dt-button-collection a.dt-button {
+   display: block !important;
+    width: 100% !important;
+    padding: 6px 16px !important;
+    clear: both !important;
+    font-weight: 400 !important;
+    color: #344050 !important;
+    text-align: inherit !important;
+    white-space: nowrap !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    margin: 0px !important;
+}
+
+.dt-button-collection button.dt-button {
+    position: relative !important;
+    box-sizing: border-box !important;
+    margin-left: 0em !important;
+    margin-right: 0em !important;
+    margin-bottom: 0em !important;
+    cursor: pointer !important;
+    font-size: 14px !important;
+    line-height: 1.6em !important;
+    overflow: hidden !important;
+    background: transparent !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    text-decoration: none !important;
+    outline: none !important;
+    text-overflow: ellipsis !important;
+}
+
+.dt-button-collection button.dt-button:hover, .dt-button-collection button.dt-button:focus {
+    color: #2a3441 !important;
+    text-decoration: none !important;
+    background-color: #efefef !important;
+}
+
+.dataTables_filter {
+	display: none !important;  
+}
+
+.fontTituloTab{
+	font-size: 0.9333333333rem!important;	
+}
+
+.accordion-button {
+	padding: 10px 20px !important;
+	font-size: 14px !important;
+}
+
+.accordion-button:not(.collapsed) {
+    font-weight: 500 !important;
+}
+
+.btnClr span.dt-down-arrow {
+    display: none !important;       
+}
+
+@media (max-width:768px){
+	#idLogo {
+		background: url(img/logo-campusmvp-fondo-blanco.png)
+	}
+}
+
+/*-----------------------------------------------
+    Data table
+-----------------------------------------------*/
+.dataTables_wrapper .table-responsive {
+    margin-bottom: 0rem !important;
+}
+
+th {
+    font-weight: 600 !important;
+    font-size: 13px !important;
+}
+
+thead, tbody, tfoot, tr, td, th {
+    border-width: 1px !important;
+}
+
+td #dropdownMenuButton {
+	width: 100% !important;
+    margin: 0px !important;
+    height: 20px; !important;
+    line-height: 0px !important;
+    border: none !important;
+}
+
+.table.dataTable {
+	width: 100% !important;
+    margin-bottom: 10px !important;
+}
+
+.table tfoot > tr > th:first-child, .table thead > tr > th:first-child, .table tr th:first-child, .table tr td:first-child {
+    padding-left: 1rem !important;
+}
+
+.table tfoot > tr > th:last-child, .table thead > tr > th:last-child, .table tr th:last-child, .table tr td:last-child {
+    padding-right: 0rem !important;
+}
+
+.pe-1 {
+    padding-right: 1rem !important;
+}
+
+.footer {
+    position: inherit !important;
+}
+
+.form-check {
+    margin-bottom: 0.34375rem !important;
+}
+
+.form-switch {
+    padding-left: 2.5em !important;
+    display: inline-block !important;
+}
+
+.form-switch .form-check-label {
+    font-size: 0.90012rem !important;
+}
+
+.form-switch .form-check-input {
+	width: 2.2em !important;
+}
+
+.form-check-input {
+    height: 1.2em !important;
+    margin-top: 0.25em !important;
+}
+
+.dataTables_wrapper .no-sort, .dataTables_wrapper .dt-checkboxes-cell {
+    padding-right: 0.75rem !important;
+    padding-left: 0.75rem !important;
+}
+
+.nav-tabs .nav-link {
+    font-size: 1.175rem;
+}
+
+.nav-tabs .nav-link span {
+    padding-right: 2.75rem !important;
+}
+
+.swal2-icon {
+    font-size: 25px!important;
+}
+
+.swal2-title {
+    font-size: 1.375em !important;
+}
+
+/* /*----------------------------------------------- */
+/*     Data table - Pagination */
+/* -----------------------------------------------*/ */
+
+div.dataTables_wrapper div.dataTables_info {
+    display: table !important;
+    line-height: 20px !important;
+    -webkit-box-align: center !important;
+    -ms-flex-align: center !important;
+    align-items: center !important;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+    line-height: 20px !important;
+    display: table !important;
+    -webkit-box-align: center !important;
+    -ms-flex-align: center !important;
+    align-items: center !important;
+    padding-top: 0em !important;   
+    font-size: 0.65em !important;
+    margin: 0px !important;
+    white-space: nowrap !important;
+    text-align: right !important;
+}
+
+div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+    margin: 0px !important;
+}
+
+.page-link {
+    font-size: 1.3em !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    box-sizing: border-box !important;
+    display: contents !important;
+    min-width: 1.5em !important;
+    padding: 0.5em 1em !important;  
+    margin-left: 0px !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    color: #878787 !important;
+    border: 1px solid transparent;
+    border-radius: 2px !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    color: #232e3c !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:active {
+    outline: none !important;
+    background-color: #317de2 !important;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #317de2), color-stop(100%, #317de2)) !important;
+    background: -webkit-linear-gradient(top, #317de2 0%, #317de2 100%) !important;
+    background: -moz-linear-gradient(top, #317de2 0%, #317de2 100%) !important;
+    background: -ms-linear-gradient(top, #317de2 0%, #317de2 100%) !important;
+    background: -o-linear-gradient(top, #317de2 0%, #317de2 100%) !important;
+    background: linear-gradient(to bottom, #317de2 0%, #317de2 100%) !important;
+    box-shadow: inset 0 0 3px #317de2 !important;
+}
+
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover {
+    cursor: default !important;
+    color: #878787 !important;
+    border: 1px solid transparent !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    color: white !important;
+    border: 1px solid #317de2 !important;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #317de2), color-stop(100%, #317de2)) !important;
+    background: -webkit-linear-gradient(top, #317de2 0%, #317de2 100%) !important;
+    background: -moz-linear-gradient(top, #317de2 0%, #317de2 100%) !important;
+    background: -ms-linear-gradient(top, #317de2 0%, #317de2 100%)!important;
+    background: -o-linear-gradient(top, #317de2 0%, #317de2 100%)!important;
+    background: linear-gradient(to bottom, #317de2 0%, #317de2 100%) !important;
+}
+
+/*-----------------------------------------------
+    Modals
+-----------------------------------------------*/
+button.btn-circle {
+    width: 2rem !important;
+    height: 2rem !important;
+}
+
+.modalTitulo {
+	padding-top: 0.8rem !important;
+    padding-bottom: 0.5rem !important;
+}
+
+.modal-footer button {
+	font-size: 13px !important;
+}
+
+#form-Etiquetas .modal-dialog {
+	min-width: 650px !important;
+}
+
+.checkSpaceRow {
+	height: 18px !important;
+}
+
+.col90 {
+	width: 90px !important;
+}
+
+@media screen and (max-width: 670px){
+	
+	#form-Etiquetas .modal-dialog {
+    	width: auto !important;
+    	min-width: min-content !important;
+	}
+	
+	.checkSpaceRow {
+	    margin-bottom: 0.5rem !important;
+	    display: contents !important;
+	}
+		
+	.checkSpaceCol {
+		display: contents !important;
+    	height: 18px !important;
+    	margin-bottom: 0.5rem !important;
+	}
+	
+	.col90 {
+		width: auto !important;
+	}
+		
+}
+
+/*-----------------------------------------------
+    Estilos para Form Visor
+-----------------------------------------------*/
+
+.lblEtiqueta {
+   padding-right: 0px !important;
+   font-weight: 700 !important;
+}
+
+.lblDocumento {
+   padding-right: 0px !important;
+   font-weight: 700 !important;
+   padding-left: 0px !important;
+}
+
+.labelRegistro {
+    padding-right: 0px !important;
+}
+
+.labelRegistroN {
+    padding-right: 0px !important;
+    color: red !important;
+    padding-left: 10px !important;
+}
+
+@media screen and (max-width: 670px){
+		
+	.lblEtiqueta, .lblDocumento {
+	   padding-right: 0px !important;
+	   font-weight: 700 !important;
+	   padding-left: 0px !important;
+	   padding-bottom: 0px !important;
+       padding-top: 0px !important;
+	}
+	
+	.labelRegistro {
+	    padding-right: 0px !important;
+	}
+	
+	.labelRegistroN {
+	    padding-right: 0px !important;
+	    color: red !important;
+	    padding-left: 10px !important;
+	}
+	
+	.labelRegistroN .col-form-label {
+		padding-bottom: 0px !important;
+       	padding-top: 0px !important;
+	} 	
+		
+}

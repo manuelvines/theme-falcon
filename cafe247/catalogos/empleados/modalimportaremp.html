@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+    
+    <!-- Validation js -->
+	<script src="../js/validate.js"></script>
+	<link href="../vendors/flatpickr/flatpickr.min.css" rel="stylesheet" />
+	
+	
+	<script>
+      var isRTL = JSON.parse(localStorage.getItem('isRTL'));
+      if (isRTL) {
+        var linkDefault = document.getElementById('style-default');
+        var userLinkDefault = document.getElementById('user-style-default');
+        linkDefault.setAttribute('disabled', true);
+        userLinkDefault.setAttribute('disabled', true);
+        document.querySelector('html').setAttribute('dir', 'rtl');
+      } else {
+        var linkRTL = document.getElementById('style-rtl');
+        var userLinkRTL = document.getElementById('user-style-rtl');
+        linkRTL.setAttribute('disabled', true);
+        userLinkRTL.setAttribute('disabled', true);
+      }
+    </script>
+	
+</head>
+
+
+<form id="form-Importarempleado" class="was-validated" novalidate>
+	<input type="hidden" name="idRegistro_Tipo" id="idRegistro_Tipo" value="0" >
+	
+	<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+		<div class="modal-content position-relative">
+			<div class="position-absolute top-0 end-0 mt-2 me-2 z-1">
+				<button class="btn-close btn btn-sm btn-circle d-flex flex-center transition-base" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body p-0">
+				<div class="rounded-top-3 py-3 ps-4 pe-6 bg-light modalTitulo">
+	   				<h5 class="mb-1" id="modal-title-abc">Importar Empleados</h5>
+				</div>
+				<div class="p-4 pb-0">
+
+					<div class="mb-2 row">
+						<input class="form-control" id="txtEmpleados" type="file" />
+					</div>
+
+				</div>
+			</div>
+			<div class="modal-footer">	
+				<button type="submit" id="submit" class="btn btn-primary">Procesar</button>
+				<button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cerrar</button>
+			</div>
+		</div>
+	</div>
+</form>
+
+<script src="../assets/js/flatpickr.js"></script>
+ <script type="text/javascript">
+ 
+   $(document).ready(function() {
+	   	  
+	   $("#form-Importarempleado").on('submit', function (event) {
+		   $(this).addClass('was-validated');
+		 });
+	   
+	   /* Necesario para validacion del form y del Select2
+	   -----------------------------------------------------*/
+	   $('#form-Importarempleado').validate({
+		   ignore: 'input[type=hidden]',
+		   focusInvalid: false,
+           errorClass: 'help-block animation-pullUp', errorElement: 'div',
+           keyUp: true,
+           submitHandler: function(form) {
+				 var idRegistro = $('#idRegistro_Tipo').val();
+				   if (idRegistro == 0){
+					   alert("GUARDA EL REGISTRO !!!");
+					   //guardarTipo();
+				   }else{
+					   alert("ACTUALIZA EL REGISTRO !!!");
+					   //actualizaTipo();
+				   }
+			},
+           errorPlacement: function (error, e) {
+        	   e.parents('.form-group').append(error);
+           },
+           highlight: function (e) {
+               $(e).closest('.form-group').removeClass('has-success has-error').addClass('has-error');
+           },
+           success: function (e) {
+               e.closest('.form-group').removeClass('has-success has-error').addClass('has-success');
+           }, rules:  {
+               select: {required: true}
+           }, messages: {
+               select: {required: 'error'}
+           }
+       }).resetForm(); 
+	
+	   	   	   
+	});
+	
+ </script>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- <link rel="stylesheet" href="../assets/datatable/SearchBuilder-1.3.4/css/searchBuilder.dataTables.min.css"  />
+   	<script src="../assets/datatable/SearchBuilder-1.3.4/js/dataTables.searchBuilder.min.js"></script> -->
+	   <script src="../cafe247/catalogos/empleados/empleado.js"></script>
+    
+</head>
+
+<div class="card mb-3" style="box-shadow: none; margin-bottom: 0rem !important;">
+
+	<div class="card-header">
+		<div class="row flex-between-end">
+			<div class="col-auto align-self-center">
+				<h5 class="mb-0" data-anchor="data-anchor">Catálogo de Empleados</h5>
+			</div>
+			<div class="col-auto d-flex">
+			</div>
+		</div>
+	</div>
+	
+	<div class="card-body bg-light pt-0" style="padding-top: 10px !important;">
+		
+		<div class="tab-content">
+					
+			<div class="tab-pane preview-tab-pane active" role="tabpanel" aria-labelledby="tab-dom-a6fa4703-a0a5-453f-a182-a8e9ae0a9282" id="dom-a6fa4703-a0a5-453f-a182-a8e9ae0a9282">
+				<div class="table-responsive">
+					<table id="tablaempleados"class="table mb-0 data-table fs--1">
+
+						<thead class="bg-200 text-900">
+							<tr>
+								<th class="sort pe-1 align-middle white-space-nowrap">Id</th>
+								<th class="sort pe-1 align-middle white-space-nowrap">Id.Empleado</th>
+								<th class="sort pe-1 align-middle white-space-nowrap">Nombre</th>
+								<th class="sort pe-1 align-middle white-space-nowrap">Tipo</th>
+								<th class="sort pe-1 align-middle white-space-nowrap">Empresa</th>
+								<th class="sort pe-1 align-middle white-space-nowrap">Turno</th>
+								<th class="sort pe-1 align-middle white-space-nowrap">Badge</th>
+								<th class="sort pe-1 align-middle white-space-nowrap">Correo</th>
+								<th class="sort pe-1 align-middle white-space-nowrap">Puesto</th>
+								<th class="no-sort pe-1 align-middle data-table-row-action">Acciones</th>
+							</tr>
+							<tr class="forFilters">
+								<th></th>
+								<th></th>
+								<th></th>
+								<th></th>
+								<th></th>
+								<th></th>
+								<th></th>
+								<th></th>
+								<th></th>
+								<th></th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+			</div>
+
+		</div> <!-- tab-content -->
+						
+	</div> <!-- card-body -->
+	
+</div><!-- card mb-3 -->
+
+<div class="modal fade" id="myModalempleado" tabindex="-1" role="dialog" aria-hidden="true"></div>
+<div class="modal fade" id="myModalimportarempleado" tabindex="-1" role="dialog" aria-hidden="true"></div>
+<div class="modal fade" id="myModalimportarfoto" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+<script type="text/javascript">
+    $(document).ready(function () { 
+         $("#myModalempleado").load('../cafe247/catalogos/empleados/modalempleado.html');
+		 $("#myModalimportarempleado").load('../cafe247/catalogos/empleados/modalimportaremp.html');
+		 $("#myModalimportarfoto").load('../cafe247/catalogos/empleados/modalimportarfoto.html');
+    });
+</script>
