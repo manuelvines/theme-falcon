@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- <link rel="stylesheet" href="../assets/datatable/SearchBuilder-1.3.4/css/searchBuilder.dataTables.min.css"  />
+   	<script src="../assets/datatable/SearchBuilder-1.3.4/js/dataTables.searchBuilder.min.js"></script> -->
+	   <script src="../cafe247/catalogos/empleados/empleado.js"></script>
+    
+    <style>
+        .relative{
+            position: relative;
+        }
+
+        .filter-container {
+            position: relative;
+            max-width: 400px;
+          
+        }
+        .filter-group{
+            position: absolute;
+            height: auto; /* Altura fija para el contenedor */
+            width: 400px; /* Ancho fijo para el contenedor */
+            top: 10;
+            left: 0;
+            bottom: 20;
+            overflow-y: auto; /* Permitir scroll vertical */
+            padding: 10px;
+            background-color: #FFFFFF;
+            border: 1px solid #ccc;
+        }
+    </style>
+
+      <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicons/favicon-16x16.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicons/favicon.ico">
+    <link rel="manifest" href="../assets/img/favicons/manifest.json">
+    <meta name="msapplication-TileImage" content="../assets/img/favicons/mstile-150x150.png">
+    <meta name="theme-color" content="#ffffff">
+    <script src="../assets/js/config.js"></script>
+    <script src="../vendors/simplebar/simplebar.min.js"></script>
+
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link href="../vendors/glightbox/glightbox.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7cPoppins:300,400,500,600,700,800,900&amp;display=swap" rel="stylesheet">
+    <link href="../vendors/simplebar/simplebar.min.css" rel="stylesheet">
+    <link href="../assets/css/theme-rtl.css" rel="stylesheet" id="style-rtl">
+    <link href="../assets/css/theme.css" rel="stylesheet" id="style-default">
+    <link href="../assets/css/user-rtl.css" rel="stylesheet" id="user-style-rtl">
+    <link href="../assets/css/user.css" rel="stylesheet" id="user-style-default">
+    <script>
+      var isRTL = JSON.parse(localStorage.getItem('isRTL'));
+      if (isRTL) {
+        var linkDefault = document.getElementById('style-default');
+        var userLinkDefault = document.getElementById('user-style-default');
+        linkDefault.setAttribute('disabled', true);
+        userLinkDefault.setAttribute('disabled', true);
+        document.querySelector('html').setAttribute('dir', 'rtl');
+      } else {
+        var linkRTL = document.getElementById('style-rtl');
+        var userLinkRTL = document.getElementById('user-style-rtl');
+        linkRTL.setAttribute('disabled', true);
+        userLinkRTL.setAttribute('disabled', true);
+      }
+    </script>
+                    
+</head>
+
+<div class="card mb-3" style="box-shadow: none; margin-bottom: 0rem !important;">
+
+	<div class="card-header">
+		<div class="row flex-between-end">
+			<div class="col-auto align-self-center">
+				<h5 class="mb-0" data-anchor="data-anchor">Catálogo de Empleados</h5>
+			</div>
+			<div class="col-auto d-flex">
+			</div>
+		</div>
+	</div>
+	
+	<div class="card-body bg-light pt-0" style="padding-top: 10px !important;">
+		
+		<div class="tab-content">
+					
+			<div class="tab-pane preview-tab-pane active" role="tabpanel" aria-labelledby="tab-dom-a6fa4703-a0a5-453f-a182-a8e9ae0a9282" id="dom-a6fa4703-a0a5-453f-a182-a8e9ae0a9282">
+				    
+        
+        <!--FILTER
+	                   <div class="filter-container" style="z-index: 100;">
+
+                        <button id="btn-show-filter-group" class="pl-3 lbtn-sm btn btn-primary me-1 mb-1" type="button">
+                          <span class="fas fa-filter me-1  " data-fa-transform="shrink-3"></span>Filtros
+                        </button>
+
+                        <div id="filter-group" class="filter-group scrollbar list py-3 rounded-lg ">
+
+                            <form action="">
+
+                                <h6 class="dropdown-header fw-medium text-uppercase  fs--2 pt-0 pb-2">Filtrar por texto</h6>
+                                
+                                <input class="form-control form-control-sm"  type="email" placeholder="name@example.com" required/>
+
+                                <hr>
+
+                                <h6 class="dropdown-header fw-medium text-uppercase  fs--2 pt-0 pb-2">Rango Númerico</h6>
+
+                                <div class="d-flex flex-row gap-3">
+                                  <input class="form-control form-control-sm" type="integer" placeholder="min" required/>
+                                  <input class="form-control form-control-sm" type="integer" placeholder="max" required/>
+                                </div>
+                            
+
+
+                                <hr>
+
+                                <h6 class="dropdown-header fw-medium text-uppercase  fs--2 pt-0 pb-2">Rango de fechas</h6>
+                                <div class="flex flex-col gap-3">
+                                  <input class="form-control form-control-sm mb-2" type="date" placeholder="min" required />
+                                  <input class="form-control form-control-sm mb-2" type="date" placeholder="max"  required/>
+                                </div>
+
+                                <hr>
+
+                                <h6 class="dropdown-header fw-medium text-uppercase  fs--2 pt-0 pb-2">Ordenar por</h6>
+
+                                </select><select class="form-select form-select-sm mb-2" aria-label=".form-select-sm example">
+                                    <option selected="">Monto</option>
+                                    <option value="1">Pago</option>
+                                    <option value="2">Intereses</option>
+                                </select>
+
+                                  </select><select class="form-select form-select-sm mb-2" aria-label=".form-select-sm example">
+                                    <option selected="">Mayor a menor</option>
+                                    <option value="1">Menor a mayor</option>
+                                </select>
+    
+
+                                <button class="btn-sm btn btn-primary me-1 mb-1" type="submit">
+                                  <span class="fas fa-search me-1  " data-fa-transform="shrink-3"></span>Aplicar filtro
+                                </button>
+ 
+                            </form>
+ 
+                         </div>
+                    </div>
+                 --> 
+			
+			
+				<div class="table-responsive">
+					<table id="tablaempleados"class="table mb-0 data-table fs--1">
+
+						<thead class="bg-200 text-900">
+							<tr>
+								<th class="sort pe-1 align-middle white-space-nowrap relative" data-id="id">Id
+                
+                   <div id="filter-group-id" class="filter-group scrollbar list py-3 rounded-lg pb-5 d-none">
+
+                    <form action="">
+                       
+
+
+                        <h6 class="dropdown-header fw-medium text-uppercase  fs--2 pt-0 pb-2">Filtrar por Id</h6>
+                        
+                        <input class="form-control form-control-sm"  type="email" placeholder="name@example.com" required/>
+
+                        <hr>
+
+                        <h6 class="dropdown-header fw-medium text-uppercase  fs--2 pt-0 pb-2">Ordenar por</h6>
+
+                        </select><select class="form-select form-select-sm mb-2" aria-label=".form-select-sm example">
+                          <option selected="">Mayor a menor</option>
+                          <option value="1">Menor a mayor</option>
+                        </select>
+
+                        <hr>
+
+                        <button class="btn-sm btn btn-primary me-1 mb-1" type="submit">
+                          <span class="fas fa-search me-1  " data-fa-transform="shrink-3"></span>Aplicar filtro
+                        </button>
+
+                        <a class="btn-sm btn btn-danger me-1 mb-1 close-filter" >
+                          <span class="fas fa-times me-1  " data-fa-transform="shrink-3"></span>Cancelar
+                        </a>
+
+                    </form>
+
+                   </div>
+                  
+                </th>
+								<th class="sort pe-1 align-middle white-space-nowrap relative" data-id="id-employe">Id.Empleado
+ 
+                   <div id="filter-group-id-employe" class="filter-group scrollbar list py-3 rounded-lg pb-5 d-none">
+                      <form action="">
+
+                          <h6 class="dropdown-header fw-medium text-uppercase  fs--2 pt-0 pb-2">Filtrar por Id Empleado</h6>
+                          
+                          <input class="form-control form-control-sm"  type="email" placeholder="name@example.com" required/>
+
+                          <hr>
+
+                          <h6 class="dropdown-header fw-medium text-uppercase  fs--2 pt-0 pb-2">Ordenar por</h6>
+
+                            </select><select class="form-select form-select-sm mb-2" aria-label=".form-select-sm example">
+                              <option selected="">Mayor a menor</option>
+                              <option value="1">Menor a mayor</option>
+                            </select>
+
+                          <hr>
+
+                          <button class="btn-sm btn btn-primary me-1 mb-1" type="submit">
+                            <span class="fas fa-search me-1  " data-fa-transform="shrink-3"></span>Aplicar filtro
+                          </button>
+
+                          <a class="btn-sm btn btn-danger me-1 mb-1 close-filter">
+                            <span class="fas fa-times me-1  " data-fa-transform="shrink-3"></span>Cancelar
+                          </a>
+
+                      </form>
+                   </div>
+                </th>
+								<th class="sort pe-1 align-middle white-space-nowrap relative" data-id="name">Nombre
+                  <div id="filter-group-name" class="filter-group scrollbar list py-3 rounded-lg pb-5 d-none">
+                      <form action="">
+
+                          <h6 class="dropdown-header fw-medium text-uppercase  fs--2 pt-0 pb-2">Filtrar por nombre</h6>
+                          
+                          <input class="form-control form-control-sm"  type="email" placeholder="Juan" required/>
+
+                          <hr>
+
+                          <h6 class="dropdown-header fw-medium text-uppercase  fs--2 pt-0 pb-2">Ordenar por</h6>
+
+                            </select><select class="form-select form-select-sm mb-2" aria-label=".form-select-sm example">
+                              <option selected="">A-Z</option>
+                              <option value="1">Z-A</option>
+                            </select>
+
+                          <hr>   
+
+                          <button class="btn-sm btn btn-primary me-1 mb-1" type="submit">
+                            <span class="fas fa-search me-1  " data-fa-transform="shrink-3"></span>Aplicar filtro
+                          </button>
+
+                          <a class="btn-sm btn btn-danger me-1 mb-1 close-filter" >
+                            <span class="fas fa-times me-1  " data-fa-transform="shrink-3"></span>Cancelar
+                          </a>
+
+                      </form>
+                  </div>
+                </th>
+								<th class="sort pe-1 align-middle white-space-nowrap relative" data-id="type">Tipo
+
+                  <div id="filter-group-type" class="filter-group scrollbar list py-3 rounded-lg pb-5 d-none">
+                    <form action="">
+
+                          <h6 class="dropdown-header fw-medium text-uppercase  fs--2 pt-0 pb-2">Ordenar Typo</h6>
+
+                          <select class="form-select form-select-sm mb-2" aria-label=".form-select-sm example">
+                            <option selected="">A-Z</option>
+                            <option value="1">Z-A</option>
+                          </select>
+
+                          <button class="btn-sm btn btn-primary me-1 mb-1" type="submit">
+                            <span class="fas fa-search me-1  " data-fa-transform="shrink-3"></span>Aplicar filtro
+                          </button>
+
+                          <a class="btn-sm btn btn-danger me-1 mb-1 close-filter">
+                            <span class="fas fa-times me-1  " data-fa-transform="shrink-3"></span>Cancelar
+                          </a>
+
+                    </form>
+                  </div>
+                </th>
+								<th class="sort pe-1 align-middle white-space-nowrap relative" data-id="company">Empresa
+                  <div id="filter-group-company" class="filter-group scrollbar list py-3 rounded-lg pb-5 d-none">
+                    <form action="">
+                        <h6 class="dropdown-header fw-medium text-uppercase  fs--2 pt-0 pb-2">Filtrar por nombre Empresa</h6>
+                        <input class="form-control form-control-sm"  type="text" placeholder="" required/>
+                        <hr>
+
+                        <button class="btn-sm btn btn-primary me-1 mb-1" type="submit">
+                          <span class="fas fa-search me-1  " data-fa-transform="shrink-3"></span>Aplicar filtro
+                        </button>
+
+                        <a class="btn-sm btn btn-danger me-1 mb-1 close-filter" >
+                          <span class="fas fa-times me-1  " data-fa-transform="shrink-3"></span>Cancelar
+                        </a>
+
+                    </form>
+                  </div>
+                </th>
+								<th class="sort pe-1 align-middle white-space-nowrap relative" data-id="shift">Turno
+                  <div id="filter-group-shift" class="filter-group scrollbar list py-3 rounded-lg pb-5 d-none">
+                    <form action="">
+                        <h6 class="dropdown-header fw-medium text-uppercase  fs--2 pt-0 pb-2">Filtrar por turno</h6>
+                        <input class="form-control form-control-sm"  type="integer" placeholder="" required/>
+                        <hr>
+
+                        <button class="btn-sm btn btn-primary me-1 mb-1" type="submit">
+                          <span class="fas fa-search me-1  " data-fa-transform="shrink-3"></span>Aplicar filtro
+                        </button>
+
+                        <a class="btn-sm btn btn-danger me-1 mb-1 close-filter"">
+                          <span class="fas fa-times me-1  " data-fa-transform="shrink-3"></span>Cancelar
+                        </a>
+
+                    </form>
+                  </div>
+                </th>
+								<th class="sort pe-1 align-middle white-space-nowrap relative" data-id="badge">Badge</th>
+								<th class="sort pe-1 align-middle white-space-nowrap relative"  data-id="email">Correo</th>
+								<th class="sort pe-1 align-middle white-space-nowrap relative" data-id="position">Puesto</th>
+								<th class="no-sort pe-1 align-middle data-table-row-action">Acciones</th>
+							</tr>
+							<tr class="forFilters">
+								<th></th>
+								<th></th>
+								<th></th>
+								<th></th>
+								<th></th>
+								<th></th>
+								<th></th>
+								<th></th>
+								<th></th>
+								<th></th>
+							</tr>
+						</thead>
+            <tbody id="tbody">
+
+            </tbody>
+					</table>
+				</div>
+			</div>
+
+		</div> <!-- tab-content -->
+						
+	</div> <!-- card-body -->
+	
+</div><!-- card mb-3 -->
+
+
+    <!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+    <script src="../vendors/popper/popper.min.js"></script>
+    <script src="../vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="../vendors/anchorjs/anchor.min.js"></script>
+    <script src="../vendors/is/is.min.js"></script>
+    <script src="../vendors/glightbox/glightbox.min.js"></script>
+    <script src="https://unpkg.com/picmo@5.7.6/dist/umd/index.js"></script>
+    <script src="https://unpkg.com/@picmo/popup-picker@5.7.6/dist/umd/index.js"></script>
+    <script src="../vendors/fontawesome/all.min.js"></script>
+    <script src="../vendors/lodash/lodash.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="../vendors/list.js/list.min.js"></script>
+    <script src="../assets/js/theme.js"></script>
+
+
+    <!--VICTOR TABLE-->
+     <script src="table.js"></script>
+
+<div class="modal fade" id="myModalempleado" tabindex="-1" role="dialog" aria-hidden="true"></div>
+<div class="modal fade" id="myModalimportarempleado" tabindex="-1" role="dialog" aria-hidden="true"></div>
+<div class="modal fade" id="myModalimportarfoto" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+<script type="text/javascript">
+    $(document).ready(function () { 
+         $("#myModalempleado").load('../cafe247/catalogos/empleados/modalempleado.html');
+		 $("#myModalimportarempleado").load('../cafe247/catalogos/empleados/modalimportaremp.html');
+		 $("#myModalimportarfoto").load('../cafe247/catalogos/empleados/modalimportarfoto.html');
+		 
+		 document.getElementById('btn-show-filter-group').addEventListener('click', function() {
+             document.getElementById('filter-group').classList.toggle('d-none');
+         });
+		 
+    });
+</script>

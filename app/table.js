@@ -4067,7 +4067,74 @@ const empleados = [
     
 ];
 
-console.log(empleados.length);
+
+
+//show filter group
+/*
+document.getElementById('btn-show-filter-group').addEventListener('click', function() {
+    document.getElementById('filter-group').classList.toggle('d-none');
+});
+*/
+
+
+
+//detectar hover en todas las clases sort
+let sort = document.getElementsByClassName('sort');
+
+//todos los botones de cerrar close-filter
+
+let closeFilter = document.getElementsByClassName('close-filter');
+
+
+//Abrir formulario de filtro
+for (let i = 0; i < sort.length; i++) {
+   
+    let id;
+
+    sort[i].addEventListener('mouseenter', function() {
+      // Capturar el valor de data-id
+      id = this.getAttribute('data-id');
+
+      //Agregar clase d-none a todos los elementos
+      let filterGroup = document.getElementsByClassName('filter-group');
+      for (let i = 0; i < filterGroup.length; i++) {
+          filterGroup[i].classList.add('d-none');
+      }
+
+      // Seleccionar id y remover clase d-none
+      document.getElementById("filter-group-" + id).classList.remove('d-none'); 
+  });
+    
+    
+  /*
+  sort[i].addEventListener('mouseout', function(event) {
+      // Verificar si el mouse está saliendo del contenedor o entrando a un hijo
+      if (!this.contains(event.relatedTarget)) {
+          // Regresar a clase d-none
+          document.getElementById("filter-group-" + id).classList.add('d-none');
+      }
+  });
+  */
+
+
+}
+
+
+
+//Cerrar formulario de filtro
+for (let i = 0; i < closeFilter.length; i++) {
+    closeFilter[i].addEventListener('click', function() {
+      
+        //Agregar clase d-none a todos los elementos
+        let filterGroup = document.getElementsByClassName('filter-group');
+        for (let i = 0; i < filterGroup.length; i++) {
+            filterGroup[i].classList.add('d-none');
+        }   
+       
+
+    });
+}
+
 
 //populate table
 let tbody = document.getElementById('tbody');
@@ -4077,10 +4144,18 @@ for (let i = 0; i < empleados.length; i++) {
 
     tbody.innerHTML += `
     <tr>
+        <td>${empleados[i].idRegistro}</td>
+        <td>${empleados[i].idEmpleado}</td>
         <td>${empleados[i].nombreCompleto}</td>
-        <td>${empleados[i].puesto}</td>
+        <td>${empleados[i].tipoEmpleado}</td>
         <td>${empleados[i].desEmpresa}</td>
-        <td>${empleados[i].desTurno}</td>
+        <td>${empleados[i].idTurno}</td>
+        <td>${empleados[i].badge}</td>
+        <td>${empleados[i].correo}</td>
+        <td>${empleados[i].puesto}</td>
+
+        
+
     </tr>
 
     `;
